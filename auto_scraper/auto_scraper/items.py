@@ -1,10 +1,9 @@
 import scrapy
 
 
-class Advertisement(scrapy.Item):
-    """One single advertisement from a website"""
+class Paragraph(scrapy.Item):
     date: str = scrapy.Field()
-    country: str = scrapy.Field()
-    platform: str = scrapy.Field()
-    fact_type: str = scrapy.Field()
-    r1: str = scrapy.Field()
+    category: str = scrapy.Field()
+    lang: str = scrapy.Field()
+    site: str = scrapy.Field()
+    text: str = scrapy.Field()
