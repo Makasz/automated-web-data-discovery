@@ -7,3 +7,5 @@ class Paragraph(scrapy.Item):
     lang: str = scrapy.Field()
     site: str = scrapy.Field()
     text: str = scrapy.Field()
+    source_url: str = scrapy.Field()
+
