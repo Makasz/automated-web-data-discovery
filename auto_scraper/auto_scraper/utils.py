@@ -59,3 +59,6 @@ websites = [
     # {'url': 'https://www.belleaukitchen.com/', 'domain': 'belleaukitchen.com', 'category': '', 'lang': 'EN'},
     # {'url': 'https://tripadvisor.com/Tourism-g186338-London_England-Vacations.html', 'domain': 'tripadvisor.com', 'category': '', 'lang': 'EN'},
 ]
+
+keywords = ['price', 'food', 'restaurant', 'bar', 'place', 'burger', 'pizza', 'sushi', 'spot', 'cake', 'coffe', 'steak', 'order',
+            'dinner',]
