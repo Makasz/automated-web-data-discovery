@@ -1,11 +1,12 @@
 import logging
 import os
 import csv
-import datetime
+from datetime import date
 from collections import OrderedDict
 
 from auto_scraper.items import Paragraph
 
+today = date.today().strftime("%Y%m%d_%H%M")
 
 def create_ad_dict(class_object):
     return OrderedDict(sorted(vars(class_object)['fields'].items(), key=lambda t: t[0]))
@@ -19,7 +20,7 @@ class CsvWriterPipeline(object):
     filename, file, writer = -1, -1, -1
 
     def open_spider(self, spider):
-        self.filename = "result.csv"
+        self.filename = f"results/result_{today}.csv"
         logging.info(f"Saving results to {self.filename}.")
         self.file = open(self.filename, 'w', newline='', encoding='utf-8')
         self.writer = csv.writer(self.file, delimiter='|')
